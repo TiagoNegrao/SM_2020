@@ -1,11 +1,11 @@
-%Trabalho 1 - Simulação e Modulação
-%Ficheiro main / central do código
+%Trabalho 1 - SimulaÃ§Ã£o e ModulaÃ§Ã£o
+%Ficheiro main / central do cÃ³digo
 %Parte 3
 %
-%Código por
-%Tiago Negrão 92990
+%CÃ³digo por
+%Tiago NegrÃ£o 92990
 %Clara Oliveira
-%Alunos do Mestrado Integrado em Engenharia Física
+%Alunos do Mestrado Integrado em Engenharia FÃ­sica
 
 clear all
 close all
@@ -23,7 +23,7 @@ v = randn(2, np)
 
 deltat_parede = zeros(np, 4)
 
-figure('Name', 'Colisões elásticas de partícula de Raio R numa caixa (a, b)', 'NumberTitle', 'off')
+figure('Name', 'ColisÃµes elÃ¡sticas de partÃ­cula de Raio R numa caixa (a, b)', 'NumberTitle', 'off')
 
 t = ti;
 deltatij = ones(np) * 10000;
@@ -47,7 +47,7 @@ while t <= tmax
         end
     end
     
-            %cálculo do deltat em caso de colisão entre particulas
+            %cÃ¡lculo do deltat em caso de colisÃ£o entre particulas
     deltatij (deltatij <= 4 * eps) = 10000;
     
     [min_linha_part, index_jlinha] = min(deltatij, [], 2);
@@ -56,7 +56,7 @@ while t <= tmax
     
     part_j = index_jlinha(part_i);
     
-            %cálculo do deltat em caso de colisão contra paredes
+            %cÃ¡lculo do deltat em caso de colisÃ£o contra paredes
     deltat_parede (deltat_parede < 4 * eps) = 10000;
     
     [min_linha, parede_particula] = min(deltat_parede, [ ], 2);
