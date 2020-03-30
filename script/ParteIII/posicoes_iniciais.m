@@ -1,11 +1,11 @@
 function [r,erro]=posicoes_iniciais(a,b,R,np)
-    assert(np > 0 && np <= 50, 'Evitar n�meros de particulas maiores que 50');
+    assert(np > 0 && np <= 50, 'Evitar números de particulas maiores que 50');
 
     erro=false;
     ntentativas_max=100;
     for i=1:np
         r(1,i)=rand(1)*(a-2*R)+R; r(2,i)=rand(1)*(b-2*R)+R;
-        %calculo da distancia �s outras part�culas
+        %calculo da distancia ï¿½s outras partï¿½culas
         if i>1
             r12=r(:,1:i-1)-repmat(r(:,i),1,i-1);
             dij=sqrt(r12(1,:).^2+r12(2,:).^2);
