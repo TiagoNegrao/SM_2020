@@ -21,6 +21,8 @@ function animacao(r, v, a, b, R, dt, deltat)
     while tempo < deltat
         r = inicial + v * tempo
         
+        %Fazer plot de uma matriz em que cada coluna corresponde a uma
+        %particula
         plot(r(1, :), r(2, :), 'ro', 'Markersize', 28 * R, 'MarkerFaceColor', 'b')
     
         rectangle('Position', [0 0 a b], 'EdgeColor', 'r')

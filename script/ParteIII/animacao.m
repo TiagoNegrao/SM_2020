@@ -12,7 +12,8 @@
 %     Alunos do Mestrado Integrado em Engenharia Física
 
 function animacao(r, v, a, b, R, dt, deltat) 
-
+    assert(r(1) >= 0 && r(1) <= a, 'É necessário respeitar condição 0 <= x <= a')
+    assert(r(2) >= 0 && r(2) <= b, 'É necessário respeitar condição 0 <= y <= b')
     assert(a > 0 && b > 0, 'É necessário que as dimensões do recipiente sejam positivas') 
     
     inicial = r;

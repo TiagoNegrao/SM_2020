@@ -16,6 +16,7 @@ function animacao(r, v, a, b, R, dt, deltat)
     assert(r(2) >= 0 && r(2) <= b, 'É necessário respeitar condição 0 <= y <= b')
     assert(a > 0 && b > 0, 'É necessário que as dimensões do recipiente sejam positivas') 
     
+    %Definir a posi��o inicial r0
     inicial = r
     tempo = 0
     while tempo < deltat

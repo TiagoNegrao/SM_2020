@@ -95,8 +95,6 @@ while t <= tmax
         rij = r(:, i) - r(:, j);
         vij = v(:, i) - v(:, j);
         
-        %Redefinição da componente da velocidade em caso de colisao entre
-        %duas particulas
         v(:, part_i) = v(:, part_i) - (dot(vij, rij) / 4 * R^2)* rij;
         v(:, part_j) = v(:, part_j) + (dot(vij, rij) / 4 * R^2) * rij;
     end
